@@ -1,0 +1,86 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "palette": {
+        "os": "#ACB0BE",
+        "closer": "p:os",
+        "pink": "#ea76cb",
+        "lavender": "#7287FD",
+        "blue":  "#1e66f5"
+    },
+    "blocks": [
+        {
+            "alignment": "left",
+            "type": "prompt",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "path",
+                    "style": "powerline",
+                    "foreground": "p:pink",
+                    "properties": {
+                        "style": "agnoster_full",
+                        "home_icon": "home",
+                        "folder_icon": "\uf07b",
+                        "folder_separator_icon": " \u276f "
+                    },
+                    "template": "\ue5ff {{ .Path }} "
+                },
+                {
+                    "style": "plain",
+                    "foreground": "p:closer",
+                    "template": "\uf105",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "alignment": "right",
+            "type": "prompt",
+            "segments": [
+                {
+                    "style": "plain",
+                    "foreground": "p:closer",
+                    "template": "\uf104 ",
+                    "type": "text"
+                },
+                {
+                    "foreground": "p:lavender",
+                    "properties": {
+                        "branch_icon": "\ue725 ",
+                        "cherry_pick_icon": "\ue29b ",
+                        "commit_icon": "\uf417 ",
+                        "fetch_status": false,
+                        "fetch_upstream_icon": false,
+                        "merge_icon": "\ue727 ",
+                        "no_commits_icon": "\uf0c3 ",
+                        "rebase_icon": "\ue728 ",
+                        "revert_icon": "\uf0e2 ",
+                        "tag_icon": "\uf412 "
+                    },
+                    "template": "{{ .HEAD }} ",
+                    "style": "plain",
+                    "type": "git"
+                }
+            ]
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "type": "prompt",
+            "segments": [
+                {
+                    "type": "status",
+                    "style": "diamond",
+                    "foreground": "p:lavender",
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "template": "<p:lavender>\u276f</>_:"
+                }
+            ]
+        }
+    ],
+    "final_space": true,
+    "version": 3
+}
+
